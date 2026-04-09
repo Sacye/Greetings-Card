@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="slide active" id="slide1">
+      <div class="slide1-content">
+        <h1>Happiest 19th Birthday</h1>
+        <p>Special Website made by Denver</p>
+        <button onclick="nextSlide(); playClick()">Click here✨</button>
+      </div>
+    </div>
+    
+    <audio id="clickSound">
+      <source src="click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="slideMusic">
+      <source src="slideMusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="slide" id="slide2">
+      <h2>A Picture of us 💙🖤</h2>
+      <img src="img1.webp" alt="memory">
+      <p>A moments where ("maya na tayo umalis💕")</p>
+      <div class="button-group">
+        <button onclick="goToSlide(1); playClick()">← Back</button>
+        <button onclick="startGame(); playClick()">Next 🎈</button>
+      </div>
+    </div>
+
+    <div class="slide" id="slide5">
+      <h2>💌 Birthday Message</h2>
+      <p>Hii honeyy, sorry if di tayo nag kita this your birthday but i wanted to say happy birthday to youu don't worry honey diko nakalimutan gift ko sayoo kahit di kopa na bibili dahil sa nanyari samin nun nakaraan, but as i said walang word akong binibitawan i will keep my promise will be fullfilled, Thanks for adjusting for me and being a man of you. Thanks for the being around you as a more than as a friend. Thankyou for being as to be loved again what is trully a love is for, and also thankyou for being touching you and getting childish around youu and for being me happiest 19th birthday honeyy 💖. </p>
+      <div class="music-control">
+        <button id="musicToggle" onclick="showVideoPopup(); playClick()">MY DIDICATED BIRTHDAY SONG TO YOU</button>
+      </div>
+      <div class="button-group">
+        <button onclick="goToSlide(4); playClick()">← Back</button>
+        <button onclick="exitWindow(); playClick()" class="exit-btn">Exit 👋</button>
+      </div>
+    </div>
+
+    <div class="slide" id="slide4">
+      <h2>Special Video #2 </h2>
+      <video controls autoplay loop>
+        <source src="vid2.mp4" type="video/mp4">
+      </video>
+      <div class="button-group">
+        <button onclick="goToSlide(2); playClick()">← Back</button>
+        <button onclick="nextSlide(); playClick()">Final Surprise </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="popupGame">
+    <div class="game-box">
+      <h2>🎈 Pop the Balloon </h2>
+      <div id="popCounter" class="pop-counter">0</div>
+      <button id="balloonBtn" class="balloon-button" onclick="popBalloon(); playClick()">Pop 🎈</button>
+      <button onclick="closeGame(); playClick()" class="close-game-btn">Close Game</button>
+    </div>
+  </div>
+
+  <div id="videoPopup">
+    <div class="video-box">
+      <button onclick="closeVideoPopup(); playClick()" class="close-video-btn">✕</button>
+      <iframe id="popupVideo" width="100%" height="500" src="https://www.youtube.com/watch?v=WRpd5Ne4tIc" title="Birthday Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
